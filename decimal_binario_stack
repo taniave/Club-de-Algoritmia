@@ -1,0 +1,30 @@
+/*CONVERSION NUMERO DECIMAL A NUMERO BINARIO*/
+
+#include <stdio.h>
+#include "stack.h"
+
+int main(){
+	int n, bit;
+
+	stack s = init();
+
+	scanf("%d",&n);
+
+	/*while(n > 0){//conversion con numeros 
+		bit = n%2;
+		n /= 2;
+		push(s, bit);
+	}*/
+	whie(n){//CONVERSION DIRECTA A BITS
+		bit = n & 1;
+		n >>= 1;
+		push(s, bit);
+	}
+
+	while(!empty(s)){
+		printf(" %d ", pop(s));
+	}
+	printf("\n");
+
+	return 0;
+}
